@@ -1,0 +1,21 @@
+{
+  "name": "hackteck2017",
+  "version": "1.0.0",
+  "description": "Get Class-ified",
+  "main": "start.js",
+  "scripts": {
+    "start": "node classes.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Se7ensins1/Class-ify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+  }
+}
