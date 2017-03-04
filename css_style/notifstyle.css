@@ -1,0 +1,23 @@
+button{
+  font-family: 'Play', sans-serif;
+}
+
+
+h3{
+  font-size: 36px;
+}
+
+h1{
+  font-family: 'Asap', sans-serif;
+  text-shadow: 3px -1px 3px rgba(0, 208, 150, 1);
+  font-size: 40px;
+}
+
+h2{
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+}
+
+body{
+  background-image: url("../imgs/geometry.png");
+}
