@@ -6,8 +6,25 @@ function checkMandatory(){
 
 }
 
+function emailChecked(){
+  $('#isEmailSelected').click(function() {
+    $("#emailInfo").toggle(this.checked);
+});
+}
+
+function textChecked(){
+  $('#isTextSelected').click(function() {
+    $("#textInfo").toggle(this.checked);
+});
+}
+
 
 function setup(){
+  $("button").css("color", "black");
+  $("#emailInfo").hide();
+  $("#textInfo").hide();
+  emailChecked();
+  textChecked();
   $("#sub").click(checkMandatory);
 
 }

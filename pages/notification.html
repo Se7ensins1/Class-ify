@@ -12,22 +12,28 @@
 <div class="container-fluid">
   <div class="row">
     <div class ="col-md-4">
-      <button class ="btn-block btn"><h3>Home</h3></button>
+      <button class ="btn-block btn btn-info"><h3>Home</h3></button>
     </div>
     <div class ="col-md-4">
-      <button class="btn-block btn"><h3>About</h3></button>
+      <button class="btn-block btn btn-warning"><h3>About</h3></button>
     </div>
   </div>
   <p></p>
   <h1>Please choose a method of notification</h1>
   <form name="userData">
     <h2>Email</h2>
-    <input type="checkbox" name="email" id="isEmailSelected"><br>
+    <input type="checkbox" name="email" id="isEmailSelected">
+    <input type="text" name="emailName" id="emailInfo"><br>
     <h2>Text</h2>
-    <input type="checkbox" name="text" id="isTextSelected"><br>
+    <input type="checkbox" name="text" id="isTextSelected">
+    <input type="text" name="phoneNumber" id="textInfo"> <br>
   </form>
 
-<button class="btn" id="sub">Finish</button>
+<button class="btn btn-success" id="sub">Finish</button>
 </div>
 </body>
+
+
+<footer><img src="../imgs/berkeleylogo.jpg"
+  alt="UC Berkeley" style="width:30%;height:5%;"></footer>
 </html>
