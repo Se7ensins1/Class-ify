@@ -50,6 +50,8 @@ function checkAt(){
 
 function setup(){
   $("button").css("color", "black");
+  $("#search").css("color", "white");
+  $("#search").css("font-size", "24px");
   $("#ifFall").hide();
   $("#ifBreadth").hide();
   $("#cratr").mouseleave(checkAt)
