@@ -9,8 +9,16 @@ public class Classes {
         this.driver = driver;
     }
 
-    public boolean classClosed(String url, String term, String career, String course) {
-        this.driver.get(url);   // load url
+    public boolean determineClass(String term, String career, String courseNum) {
+        if (term != null && career != null && courseNum != null) {
+            return this.classClosed(term, career, courseNum);
+        } else {
+            return false;
+        }
+    }
+
+    public boolean classClosed(String term, String career, String courseNum) {
+        this.driver.get("https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL");   // load url
         //hold();
         this.driver.findElement(By.id("CLASS_SRCH_WRK2_STRM$35$")).sendKeys(term);  // change term to "Spring 2017"
         //hold();
@@ -18,7 +26,7 @@ public class Classes {
         //hold();
         this.driver.findElement(By.id("DERIVED_CLSRCH_SSR_EXPAND_COLLAPS$149$$1")).click(); // clicks to extend the Additional Search Criteria menu
         //hold();
-        this.driver.findElement(By.id("SSR_CLSRCH_WRK_CLASS_NBR$9")).sendKeys(course);  // changes course keyword to Korean 1A "33181"
+        this.driver.findElement(By.id("SSR_CLSRCH_WRK_CLASS_NBR$9")).sendKeys(courseNum);  // changes course keyword to Korean 1A "33181"
         //hold();
         this.driver.findElement(By.id("CLASS_SRCH_WRK2_SSR_PB_CLASS_SRCH")).click();    // click the search button
         //hold();
@@ -31,18 +39,18 @@ public class Classes {
         }
     }
 
-    private void hold() {
-        // TODO
-    }
+//    private void hold() {
+//        WebDriverWait wait = new WebDriverWait(this.driver, 10);
+//        wait.until(driver => driver.findElement(By.id("CLASS_SRCH_WRK2_STRM$35$")));
+//    }
 
     public static void main(String[] args) {
-        String url = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL";
         System.setProperty("webdriver.chrome.driver", "C:/Users/anastasiav/Downloads/chromedriver_win32/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         Classes a = new Classes(driver);
-        while (a.classClosed(url,"2172", "UGRD", "33181")) {
+        while (a.classClosed("2172", "UGRD", "33181")) {
             //a.hold();
-            a.classClosed(url,"2172", "UGRD", "33181");
+            a.classClosed("2172", "UGRD", "33181");
         }
     }
 }
