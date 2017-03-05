@@ -16,7 +16,9 @@ function emailChecked(){
 function textChecked(){
   $('#isTextSelected').click(function() {
     $("#textInfo").toggle(this.checked);
+    $("#serviceInfo").toggle(this.checked);
     $("#textInfo").css("box-shadow", "10px 5px 5px black");
+    $("#serviceInfo").css("box-shadow", "10px 5px 5px black");
 });
 }
 
@@ -25,6 +27,7 @@ function setup(){
   $("button").css("color", "black");
   $("#emailInfo").hide();
   $("#textInfo").hide();
+  $("#serviceInfo").hide();
   emailChecked();
   textChecked();
   $("#sub").click(checkMandatory);
