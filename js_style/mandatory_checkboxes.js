@@ -9,12 +9,14 @@ function checkMandatory(){
 function emailChecked(){
   $('#isEmailSelected').click(function() {
     $("#emailInfo").toggle(this.checked);
+    $("#emailInfo").css("box-shadow", "10px 5px 5px black");
 });
 }
 
 function textChecked(){
   $('#isTextSelected').click(function() {
     $("#textInfo").toggle(this.checked);
+    $("#textInfo").css("box-shadow", "10px 5px 5px black");
 });
 }
 
