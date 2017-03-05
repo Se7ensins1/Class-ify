@@ -3,6 +3,9 @@ function checkMandatory(){
   if (manCheck == false){
     alert("Please choose one");
   }
+  else{
+    window.location.replace("keep_open.html");
+  }
 
 }
 
