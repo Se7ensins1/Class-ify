@@ -2,18 +2,28 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.HashMap;
+
+
 public class Classes {
     public final WebDriver driver;
+    public boolean status; // true is class is open, false is class is closed
 
-    public Classes (WebDriver driver) {
-        this.driver = driver;
+    public Classes () {
+        this.driver = new ChromeDriver();
+        this.status = false;
     }
 
-    public boolean determineClass(String term, String career, String courseNum) {
+    public HashMap<String, String> findClass(String term, String career, String courseNum) {
+        HashMap<String, String> classData = new HashMap<>();
+
         if (term != null && career != null && courseNum != null) {
-            return this.classClosed(term, career, courseNum);
+            classData.put("term", term);
+            classData.put("career", career);
+            classData.put("courseNum", courseNum);
+            return classData;
         } else {
-            return false;
+            return classData;
         }
     }
 
@@ -32,28 +42,19 @@ public class Classes {
         hold(2000);
 
         // if the element has index of the gif > 0 the class will return true, else return false
-        if (this.driver.findElement(By.id("win0div$ICField$4$$0")).getText().indexOf("/cs/bcsprd_pub/cache/PS_CS_STATUS_CLOSED_ICN_1.gif") > 0) {
+        if (this.driver.findElement(By.id("win0div$ICField$4$$0")).getText().indexOf("PS_CS_STATUS_CLOSED_ICN_1.gif") > 0) {
+            this.status = true;
             return false;    // class is open
         } else {
             return true;    // class is closed
         }
     }
 
-    private void hold(int milli) {
+    public void hold(int milli) {
         try {
             Thread.sleep(milli);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
-    }
-
-    public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/anastasiav/Downloads/chromedriver_win32/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        Classes a = new Classes(driver);
-        while (a.classClosed("2172", "Undergraduate", "33181")) {
-            a.hold(30000);
-            a.classClosed("2172", "Undergraduate", "33181");
         }
     }
 }

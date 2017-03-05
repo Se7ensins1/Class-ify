@@ -4,6 +4,14 @@ import javax.mail.internet.*;
 
 public class Mailer{
 
+    public boolean mail;
+    public boolean text;
+
+    public Mailer(boolean mail, boolean text){
+        this.mail = mail;
+        this.text = text;
+    }
+
     public static void mail(String to, String sub, String msg) {
         send(to, sub, msg);
     }
