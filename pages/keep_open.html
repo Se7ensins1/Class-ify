@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+       //By using jQuery
+       $(window).bind('beforeunload', function () {
+               return 'If you leave the application will stop.';
+       });
+</script>
     <title>Class-ify</title>
 </head>
 <body>
