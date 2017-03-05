@@ -43,3 +43,14 @@ body{
   margin-right: 30%;
   margin-left: 40%;
 }
+
+input{
+  border-style: dotted;
+  border-color: red;
+
+}
+select{
+  border-style: dashed;
+  border-width: 3px;
+  border-color: red;
+}

@@ -13,6 +13,7 @@ function emailChecked(){
   $('#isEmailSelected').click(function() {
     $("#emailInfo").toggle(this.checked);
     $("#emailInfo").css("box-shadow", "10px 5px 5px black");
+    $("#emailInfo").css("width", "250px");
 });
 }
 
@@ -22,6 +23,8 @@ function textChecked(){
     $("#serviceInfo").toggle(this.checked);
     $("#textInfo").css("box-shadow", "10px 5px 5px black");
     $("#serviceInfo").css("box-shadow", "10px 5px 5px black");
+    $("#textInfo").css("width", "150px");
+    $("#serviceInfo").css("width", "200px");
 });
 }
 

@@ -16,6 +16,9 @@ h1{
 h2{
   font-family: 'Karla', sans-serif;
   font-size: 40px;
+  border-top: 20px groove green;
+  border-bottom: 20px ridge green;
+
 }
 
 body{
@@ -23,5 +26,25 @@ body{
 }
 
 input{
-box-shadow: inset 0 0 1em gold;
+box-shadow: inset 0 0 1em black;
+}
+
+#leftbord{
+  border-left: 20px solid green;
+  margin-left: 20%;
+}
+
+#rightbord{
+  border-right: 20px solid green;
+  margin-right: 20%;
+}
+
+#sub{
+  font-size: 30px;
+}
+#isTextSelected{
+  margin-right: 10%;
+}
+#isEmailSelected{
+  margin-left: 20%;
 }
