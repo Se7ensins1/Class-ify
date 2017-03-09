@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <!--This adds Bootcamp and Bootcamp icons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     <link rel="stylesheet" href="../css_style/style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="../js_style/userData.js"></script>
   <script src="../js_style/style.js"></script>
     <title>Class-ify</title>
 </head>
@@ -20,7 +21,7 @@
         <button class ="btn-block btn btn-info"><h3>Home</h3></button>
       </div>
       <div class ="col-md-6">
-        <form action="about.html"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
+        <form><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
       </div>
     </div>
 <h1 id="titl" class="text-center">Select a class</h1>
@@ -28,13 +29,12 @@
   <div id="data">
   <form name="userData">
 
-
 <div id="tryingCenter">
   <h2>Term:</h2>
   <!--<input list="semester" name="semester">
   <datalist id="semester">-->
-  <select size="1" style="width:250px;" id="semester">
-    <option value="notValid" selected='selected'>&nbsp; </option>
+  <select size="5" style="width:250px;" id="semester">
+    <option value="" selected='selected'>&nbsp; </option>
   <option>2016 Spring</option>
   <option> 2016 Summer</option>
   <option> 2016 Fall</option>
@@ -47,16 +47,15 @@
   </select>
 </div>
 
-
-<p></p><br>
-<h2 class="text-center"><i class="fa fa-search"></i> Class Search</h2>
-<p></p><br>
 <div class="row">
-  <div class="col-md-4">
+<div class="col-md-6">
+<p></p><br>
+<h2><i class="fa fa-search"></i> Class Search</h2>
+<p></p><br>
 <h2>Subject:</h2>
   <div class="wrapper">
-    <select size="1" name="subjects" id="subjects" style="width:250px">
-      <option value="notValid" selected='selected'>&nbsp; </option>
+    <select size="5" name="subjects" id="subjects" style="width:250px">
+      <option value="" selected='selected'>&nbsp; </option>
   <option value="STUDIES">Advanced Doctoral Studies</option>
   <option value="AEROSPC">Aerospace Studies</option>
   <option value="AFRICAM">African American Studies</option>
@@ -305,42 +304,279 @@
   <option value="EAPWOMST">Women&#039;s and Gender Studies</option>
   <option value="YIDDISH">Yiddish</option>
 </select>
-</div></div>
-
-
-
-
-<div class="col-md-4">
-<h2>Course Number:</h2>
-<!--<input list="crn" name="crn">
-<datalist id="crn">-->
-<input type="text" name="courseNum">
-
-
 </div>
 
 
-<div class="col-md-4">
+
+<p></p><br>
+<h2>Course Number:</h2>
+<!--<input list="crn" name="crn">
+<datalist id="crn">-->
+<div class="wrapper">
+  <select size="5" style="width:250px" id="crn">
+  <option value="" selected='selected'>&nbsp; </option>
+  <option>contains</option>
+  <option>greater than or equal to</option>
+  <option>is exactly</option>
+  <option>less than or equal to</option>
+  </select>
+</div>
+
+
+<p></p><br>
 <h2>Course Career:</h2>
 <!--<input list="career" name="career">
 <datalist id="career">-->
 
 <div class="wrapper">
-  <select size="1" style="width:250px" id="career">
-  <option value="notValid" selected='selected'>&nbsp; </option>
+  <select size="5" style="width:250px" id="career">
+  <option value="" selected='selected'>&nbsp; </option>
   <option>Graduate</option>
   <option>Law</option>
   <option>UC Berkeley extension</option>
   <option>Undergraduate</option>
   </select>
-</div></div>
+</div>
 
+<p></p><br>
+<h2>Requirement Designation:</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="requirement">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option value="ACAH">Am Cultures &amp; Am History</option>
+<option value="ACAI">Am Cultures &amp; Am Institutions</option>
+<option value="AHI">Am History &amp; Institutions</option>
+<option value="AC">American Cultures</option>
+<option value="AH">American History</option>
+<option value="AI">American Institutions</option>
+<option value="ELRC">Ent Lv Write &amp; Read Comp A</option>
+<option value="ELW">Entry Level Writing</option>
+<option value="RC1">Reading and Composition A</option>
+<option value="RCE">Reading and Composition A or B</option>
+<option value="RC2">Reading and Composition B</option>
+  </select>
+</div>
+
+<p></p><br>
+<h2>Course Component</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="component">
+    <option value="" selected='selected'>&nbsp; </option>
+<option value="CLN">Clinic</option>
+<option value="COL">Colloquium</option>
+<option value="CON">Conversation</option>
+<option value="DEM">Demonstration</option>
+<option value="GRP">Directed Group Study</option>
+<option value="DIS">Discussion</option>
+<option value="FLD">Field Work</option>
+<option value="IND">Independent Study</option>
+<option value="INT">Internship</option>
+<option value="LAB">Laboratory</option>
+<option value="LEC">Lecture</option>
+<option value="LIS">Listening</option>
+<option value="PRA">Practicum</option>
+<option value="REA">Reading</option>
+<option value="REC">Recitation</option>
+<option value="RSC">Research</option>
+<option value="SLF">Self-paced</option>
+<option value="SEM">Seminar</option>
+<option value="SES">Session</option>
+<option value="SIM">Simulcast</option>
+<option value="STD">Studio</option>
+<option value="SUP">Supplementary</option>
+<option value="TUT">Tutorial</option>
+<option value="VOL">Voluntary</option>
+<option value="WBD">Web-Based Discussion</option>
+<option value="WBL">Web-Based Lecture</option>
+<option value="WOR">Workshop</option>
+</select>
+</div>
+
+<p></p><br>
+<h2>Course Attribute:</h2>
+<!--<input list="cratr" name="cratr" id="cra">
+<datalist id="cratr">-->
+<select id="cratr">
+  <option value="0" selected='selected'>&nbsp; </option>
+  <option value="1" id="breadCheck">Breadth Requirements</option>
+  <option value="2" id="fallCheck">Fall Program for Freshman</option>
+  </select>
+
+
+
+<p></p><br>
+<h2>Course Attribute Value:</h2>
+<!--<input list="cratrval" name="cratrval" id="ifFall">
+<datalist id="cratrval">
+  <option value="" selected='selected'>&nbsp; </option>
+  <option value="FPF: Berkeley Campus">
+  <option value="FPF: San Francisco Campus">
+</datalist>-->
+<div class="wrapper" id="ifFall">
+  <select size="3" style="width:250px">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>FPF: Berkeley Campus</option>
+    <option>FPF: San Francisco Campus</option>
+  </select>
+  </div>
+
+
+<div class="wrapper" id="ifBreadth">
+  <select size="5" style="width:250px">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>Arts &amp; Language</option>
+    <option>Biological Science</option>
+    <option>Foreign Language</option>
+    <option>Historical Studies</option>
+    <option>Internation Studies</option>
+    <option>Philosophy &amp; Values</option>
+    <option>Physical Science</option>
+    <option>Quantitative Reasoning</option>
+    <option>Social &amp; Behavioral Science</option>
+  </select>
+</div>
 </div>
 
 
+<div class="col-md-6"><br>
+  <h2 id="shorten"><i class="fa fa-search-plus"></i> Additional Search Criteria</h2><br>
+
+<h2>Meeting Start Time:</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="startTime">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>between</option>
+    <option>greater than</option>
+    <option>greater than or equal to</option>
+    <option>is exactly</option>
+    <option>less than</option>
+    <option>less than or equal to</option>
+  </select>
+</div>
+<input type="text" name="time" placeholder="Military">
+<p></p><br>
+<h2>Meeting End Time:</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="endTime">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>between</option>
+    <option>greater than</option>
+    <option>greater than or equal to</option>
+    <option>is exactly</option>
+    <option>less than</option>
+    <option>less than or equal to</option>
+  </select>
+</div>
+<input type="text" name="time" placeholder="Military">
+<p></p><br>
+<h2>Days of Week:</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="days">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>exclude any of these days</option>
+    <option>exclude only these days</option>
+    <option>include any of these days</option>
+    <option>include only these days</option>
+  </select>
+</div>
+<p></p><br>
+<input type="checkbox" name="mon">Mon
+<input type="checkbox" name="tues">Tues
+<input type="checkbox" name="wed">Wed
+<input type="checkbox" name="thurs">Thurs
+<input type="checkbox" name="fri">Fri
+<input type="checkbox" name="sat">Sat
+<input type="checkbox" name="sun">Sun
+<p></p><br>
+<h2>Instructor Last Name:</h2>
+<div class="wrapper">
+  <select size="4" style="width:250px" id="teacher">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>begins with</option>
+    <option>contains</option>
+    <option>is exactly</option>
+  </select>
+</div>
+<input type="text" name="teacherName">
+<p></p><br>
+<h2>Class Nbr:</h2>
+<input id="classNum" type="text" name="nbr">
+<p></p><br>
+<h2>Course Keyword:</h2>
+<input type="text" name="keyword">
+<p></p><br>                             <div id="shortenHide">
+<h2>Minimum Units:</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="minUnit">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>greater than</option>
+    <option>greater than or equal to</option>
+    <option>is exactly</option>
+    <option>less than</option>
+    <option>less than or equal to</option>
+  </select>
+</div>
+<input type="text" name="minUnits">
+<p></p><br>
+<h2>Maximum Units:</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="maxUnit">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>greater than</option>
+    <option>greater than or equal to</option>
+    <option>is exactly</option>
+    <option>less than</option>
+    <option>less than or equal to</option>
+  </select>
+</div>
+<input type="text" name="maxUnits">
+<p></p><br>
+<h2>Mode of Instruction:</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="mode">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>In Person</option>
+    <option>Other</option>
+    <option>Simulcast</option>
+    <option>Web-Based</option>
+  </select>
+</div>
+<p></p><br>
+<h2>Location:</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="location">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>Abroad</option>
+    <option>Berkeley Global Campus @ RcBay</option>
+    <option>UC Berkeley Main Campus</option>
+    <option>UC Center London</option>
+    <option>UC Extension SF</option>
+    <option>UC Washington Center</option>
+  </select>
+</div>
+<p></p><br>
+<h2>Session:</h2>
+<div class="wrapper">
+  <select size="5" style="width:250px" id="session">
+    <option value="" selected='selected'>&nbsp; </option>
+    <option>Dynamically Dated Session</option>
+    <option>Regular Academic Session</option>
+    <option>Session A</option>
+    <option>Session B</option>
+    <option>Session C</option>
+    <option>Session D</option>
+    <option>Session E</option>
+    <option>Summer LLM First Quarter</option>
+    <option>Summer LLM Fourth Quarter</option>
+    <option>Summer LLM Second Quarter</option>
+    <option>Summer LLM Third Quarter</option>
+  </select>
+</div>
+                            </div>
 
 
 
+</div>
 </div>
 
 </form>
@@ -351,7 +587,7 @@
 
 
 <p></p><p></p><p></p>
-<button id="search" class="btn btn-primary" onclick="validateClass()">Continue</button>
+<form><button id="search" class="btn btn-primary">Continue</button></form>
 
 
 
