@@ -1,13 +1,10 @@
-function checkMandatory(){
+/*function checkMandatory(){
   var manCheck = document.userData.email.checked || document.userData.text.checked;
   if (manCheck == false){
     alert("Please choose one");
   }
-  else{
-    window.location.replace("keep_open.html");
-  }
 
-}
+}*/
 
 function emailChecked(){
   $('#isEmailSelected').click(function() {
@@ -24,7 +21,7 @@ function textChecked(){
     $("#textInfo").css("box-shadow", "10px 5px 5px black");
     $("#serviceInfo").css("box-shadow", "10px 5px 5px black");
     $("#textInfo").css("width", "150px");
-    $("#serviceInfo").css("width", "200px");
+    //$("#serviceInfo").css("width", "200px");
 });
 }
 
@@ -36,10 +33,46 @@ function setup(){
   $("#serviceInfo").hide();
   emailChecked();
   textChecked();
-  $("#sub").click(checkMandatory);
+  //$("#sub").click(checkMandatory);
 
 }
 
+function validateForm() {
+    var validEmail = document.forms["userData"]["emailName"].value;
+    var validNumber = document.forms.userData.phoneNumber.value;
+    var validCompany = $("#serviceInfo option:selected").val();
+    var valid = true;
+    var manCheck = document.userData.email.checked || document.userData.text.checked;
+    if (manCheck == false){
+      alert("Please choose one");
+      valid = false;
+    }
+    if ((validEmail == "" || validEmail.indexOf('@') == -1) && document.userData.email.checked) {
+        alert("Email must be filled out");
+        valid = false;
+    }
+    /*if ((validNumber == "" || validNumber.indexOf('-') != -1 || validNumber.indexOf('()') != -1 || validNumber.indexOf(')') != -1) && document.userData.text.checked) {
+        alert("Number must be filled out correctly");
+        valid = false;
+    }
+    if (validCompany == "" && document.userData.text.checked) {
+        alert("Company must be filled out");
+        valid = false;
+    }*/
+    if (document.userData.text.checked){
+      if (validNumber == "" || validNumber.indexOf('-') != -1 || validNumber.indexOf('()') != -1 || validNumber.indexOf(')') != -1 || validNumber.length != 10) {
+          alert("Number must be filled out correctly");
+          valid = false;
+      }
+      if (validCompany == "Service Company") {
+          alert("Company must be selected");
+          valid = false;
+      }
+    }
+    if (valid == true){
+      window.location.replace("keep_open.html")
+    }
+}
 
 
 $(document).ready(setup);

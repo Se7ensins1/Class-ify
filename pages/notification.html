@@ -31,14 +31,31 @@
     <input type="text" name="emailName" id="emailInfo"><br></div>
     <div class="col-md-6"><h2 class="text-center" id="leftbord"><i class="fa fa-phone"></i> Text and Service <i class="fa fa-phone"></i></h2>
     <p class="text-right">
-    <input type="text" name="phoneNumber" id="textInfo" placeholder="Phone Number">
-    <input type="text" name="service" id="serviceInfo" placeholder="Service Company">
-    <input type="checkbox" name="text" id="isTextSelected"><br></p></div>
+      <input type="checkbox" name="text" id="isTextSelected"><br>
+        <input type="text" name="phoneNumber" id="textInfo" placeholder="########## Format">
+      <div class="wrapper" id="schooch">
+        <select size="1" style="width:250px" id="serviceInfo">
+        <option value="Service Company" selected='selected'>Service Company </option>
+        <option>att</option>
+        <option>tmobile</option>
+        <option>verizon</option>
+        <option>sprint</option>
+        <option>virginmobile</option>
+        <option>metropcs</option>
+        <option>boostmobile</option>
+        <option>cricket</option>
+        <option>ting</option>
+        </select>
+      </div>
+
+
+    <!--<input type="text" name="service" id="serviceInfo" placeholder="Service Company">-->
+    </p></div>
   </div>
   </form>
 
 <p></p><p></p><p></p>
-<button class="btn btn-success" id="sub">Finish</button>
+<button class="btn btn-success" id="sub" onclick="validateForm()">Finish</button>
 </div>
 </body>
 

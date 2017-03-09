@@ -54,7 +54,11 @@ function setup(){
   $("#search").css("font-size", "24px");
   $("#ifFall").hide();
   $("#ifBreadth").hide();
+  $("#shortenHide").hide();
   $("#cratr").mouseleave(checkAt)
+  $("#shorten").click(function(){
+    $("#shortenHide").show();
+  });
 
 }
 
