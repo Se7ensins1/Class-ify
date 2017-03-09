@@ -16,7 +16,6 @@
     "url": ""
   },
   "homepage": "",
-  "dependencies": {
-    "com.google.cloud", name: 'google-cloud-storage', version: '0.9.3-beta'
+  "dependencies":
   }
 }
