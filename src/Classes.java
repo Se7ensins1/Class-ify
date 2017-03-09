@@ -11,7 +11,7 @@ public class Classes {
 
     public Classes () {
         this.driver = new ChromeDriver();
-        this.status = false;
+        this.status = false;    // true if class is open, false if class is closed
     }
 
     public HashMap<String, String> findClass(String term, String career, String courseNum) {
@@ -27,7 +27,7 @@ public class Classes {
         }
     }
 
-    public boolean classClosed(String term, String career, String courseNum) {
+    public void classOpen(String term, String career, String courseNum) {
         this.driver.get("https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL");   // load url
         hold(2000);
         this.driver.findElement(By.id("CLASS_SRCH_WRK2_STRM$35$")).sendKeys(term);  // change term to "Spring 2017"
@@ -41,12 +41,10 @@ public class Classes {
         this.driver.findElement(By.id("CLASS_SRCH_WRK2_SSR_PB_CLASS_SRCH")).click();    // click the search button
         hold(2000);
 
-        // if the element has index of the gif > 0 the class will return true, else return false
-        if (this.driver.findElement(By.id("win0div$ICField$4$$0")).getText().indexOf("PS_CS_STATUS_CLOSED_ICN_1.gif") > 0) {
-            this.status = true;
-            return false;    // class is open
-        } else {
-            return true;    // class is closed
+        // if the element has index of the gif > 0 the class's status is open (true), else class's status is closed (false)
+        String open = this.driver.findElement(By.id("win0div$ICField$4$$0")).getAttribute("innerHTML");
+        if (open.indexOf("/cs/bcsprd_pub/cache/PS_CS_STATUS_OPEN_ICN_1.gif") > 0) {
+            this.status = true;     // class is now open
         }
     }
 
