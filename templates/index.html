@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta charset="UTF-8">
+    <!--This adds Bootcamp and Bootcamp icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <link rel="stylesheet" href="../css_style/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../js_style/style.js"></script>
+    <title>Class-ify</title>
+</head>
+
+<body>
+  <div class="container-fluid"> <!-- Allows the page to adjust to user's display -->
+    <div class="row"> <!-- creates the grid -->
+      <div class ="col-md-6">
+        <button class ="btn-block btn btn-info"><h3>Home</h3></button>
+      </div>
+      <div class ="col-md-6">
+        <form action="about.html"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
+      </div>
+    </div>
+    <h1 id="titl" class="text-center">Select a class</h1>
+    <p></p>
+    <div id="data">
+      <form action = "http://localhost:5000/notification" method = "post" name = "userData">
+        <h2>Term:</h2>
+        <select size="1" style="width:250px;" id="semester" name="term">
+          <option value="notValid" selected='selected'>&nbsp; </option>
+          <option>2017 Spring</option>
+          <option>2017 Summer</option>
+        </select>
+
+        <h2>Class Number:</h2>
+        <input type="number" name="classNum">
+
+        <h2>Course Career:</h2>
+        <select size="1" style="width:250px" id="career" name="car">
+          <option value="notValid" selected='selected'>&nbsp; </option>
+          <option>Graduate</option>
+          <option>Law</option>
+          <option>UC Berkeley extension</option>
+          <option>Undergraduate</option>
+        </select>
+
+        <input type = "submit" value = "continue" />
+      </form>
+    </div>
+    <p></p><p></p><p></p>
+  </div>
+</body>
+
+<p><p><p></p></p></p>
+<footer><img class="img-responsive" src="../imgs/berkeleylogo.jpg"
+  alt="UC Berkeley" style="width:30%;height:5%;"></footer>
+</html>
