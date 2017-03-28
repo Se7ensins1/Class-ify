@@ -4,7 +4,7 @@ import smtplib
 
 
 def open_driver(url):
-    driver = webdriver.Chrome("C:/Users/anastasiav/Documents/Projects/Class-ify/backend/chromedriver.exe")
+    driver = webdriver.Chrome("C:/Users/anastasiav/Documents/Projects/Class-ify/app/chromedriver.exe")
     driver.get(url)
     time.sleep(1)
     return driver
