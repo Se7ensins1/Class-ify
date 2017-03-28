@@ -32,7 +32,7 @@ def keepOpen():
 
 @app.route('/done')
 def run():
-	status.main(userData['url'], userData['term'], userData['career'], userData['classNum'], userData['mailTo'], userData['textTo'], userData['service'])
+	main(userData['url'], userData['term'], userData['career'], userData['classNum'], userData['mailTo'], userData['textTo'], userData['service'])
 	return render_template("done.html")
 
 
