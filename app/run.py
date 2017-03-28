@@ -10,6 +10,10 @@ userData = {}
 def index():
 	return render_template("index.html")
 
+@app.rout('/about')
+def about():
+	return render_template("about.html")
+
 @app.route('/notification', methods = ['POST', 'GET'])
 def notification():
 	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
