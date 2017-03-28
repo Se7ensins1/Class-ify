@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request
-from status import status
+from status import main
 
 app = Flask(__name__)
 
