@@ -10,6 +10,7 @@
       <link rel="stylesheet" href="../static/css_style/style.css"/>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       <script src="../static/js_style/style.js"></script>
+      <script src="../static/js_style/mandatory_checkboxes.js"></script>
       <title>Class-ify</title>
   </head>
 
@@ -23,34 +24,56 @@
           <form action="/about"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
         </div>
       </div>
-      <h1 id="titl" class="text-center">Select a class</h1>
+      <h1 id="titl" class="text-center">Select a Class and Contact Info</h1>
       <p></p>
       <div id="data">
-        <form action = "/notification" method = "post" name = "userData">
-          <h2>Term:</h2>
-          <select size="1" style="width:250px;" id="semester" name="term">
-            <option value="notValid" selected='selected'>&nbsp; </option>
-            <option>2017 Spring</option>
-            <option>2017 Summer</option>
-          </select>
-          <h2>Class Number:</h2>
-          <input type="number" name="classNum">
-          <h2>Course Career:</h2>
-          <select size="1" style="width:250px" id="career" name="car">
-            <option value="notValid" selected='selected'>&nbsp; </option>
-            <option>Graduate</option>
-            <option>Law</option>
-            <option>UC Berkeley extension</option>
-            <option>Undergraduate</option>
-          </select>
-          <input type = "submit" value = "continue" />
+        <form action = "/confirm" method = "post" name = "userData">
+          <div class="col-md-6">
+            <h2>Term:</h2>
+            <select size="1" style="width:250px;" id="semester" name="term">
+              <option value="notValid" selected='selected'>&nbsp; </option>
+              <option>2017 Spring</option>
+              <option>2017 Summer</option>
+            </select>
+            <h2>Class Number:</h2>
+            <input type="number" name="classNum">
+            <h2>Course Career:</h2>
+            <select size="1" style="width:250px" id="career" name="car">
+              <option value="notValid" selected='selected'>&nbsp; </option>
+              <option>Graduate</option>
+              <option>Law</option>
+              <option>UC Berkeley extension</option>
+              <option>Undergraduate</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <h2>Email:</h2>
+            <input type="checkbox" name="email" id="isEmailSelected">
+            <input type="text" name="emailName" id="emailInfo"><br>
+            <h2>Text and Service:</h2>
+            <input type="checkbox" name="text" id="isTextSelected">
+            <input type="text" name="phoneNumber" id="textInfo" placeholder="########## Format">
+            <select size="1" style="width:150px" id="serviceInfo" name="service">
+              <option value="Service Company" selected='selected'>Service Company </option>
+              <option>att</option>
+              <option>tmobile</option>
+              <option>verizon</option>
+              <option>sprint</option>
+              <option>virginmobile</option>
+              <option>metropcs</option>
+              <option>boostmobile</option>
+              <option>cricket</option>
+              <option>ting</option>
+            </select>
+            <br><br><br><br><br>
+          </div>
+          <input type="submit" value="continue">
         </form>
       </div>
-      <br>
     </div>
+
   </body>
 
-  <footer><img class="img-responsive" src="../static/imgs/berkeleylogo.jpg"
-    alt="UC Berkeley" style="width:30%;height:5%;">
+  <footer><img class="img-responsive" src="../static/imgs/berkeleylogo.jpg" alt="UC Berkeley" style="width:30%;height:5%;">
   </footer>
 </html>

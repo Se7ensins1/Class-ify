@@ -14,21 +14,16 @@ def index():
 def about():
 	return render_template("about.html")
 
-@app.route('/notification', methods = ['POST', 'GET'])
-def notification():
+@app.route('/confirm', methods = ['POST', 'GET'])
+def keepOpen():
 	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
 	userData['term'] = request.form['term']
 	userData['career'] = request.form['car']
 	userData['classNum'] = request.form['classNum']
-	return render_template("notification.html")
-
-@app.route('/confirm', methods = ['POST', 'GET'])
-def keepOpen():
 	userData['mailTo'] = request.form['emailName']
 	userData['textTo'] = request.form['phoneNumber']
 	userData['service'] = request.form['service']
 	return render_template("confirm.html")
-
 
 @app.route('/done')
 def run():
