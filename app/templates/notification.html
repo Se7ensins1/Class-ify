@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
+      <!--#include virtual="header.html"--> 
       <meta charset="UTF-8">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
       <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-      <link rel="stylesheet" href="../css_style/notifstyle.css">
+      <link rel="stylesheet" href="../static/css_style/notifstyle.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src="../js_style/mandatory_checkboxes.js"></script>
+      <script src="../static/js_style/mandatory_checkboxes.js"></script>
       <title>Class-ify</title>
   </head>
 
@@ -18,15 +18,15 @@
     <div class="container-fluid">
       <div class="row">
         <div class ="col-md-6">
-          <form action="home.html"><button class ="btn-block btn btn-info"><h3>Home</h3></button></form>
+          <form action="/"><button class ="btn-block btn btn-info"><h3>Home</h3></button></form>
         </div>
         <div class ="col-md-6">
-          <form action="about.html"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
+          <form action="/about"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
         </div>
       </div>
       <p></p>
       <h1>Please choose a method of notification</h1>
-      <form action="http://class-ify.herokuapp.com/confirm" method="post" name="userData">
+      <form action="/confirm" method="post" name="userData">
         <h2>Email:</h2>
         <input type="checkbox" name="email" id="isEmailSelected">
         <input type="text" name="emailName" id="emailInfo"><br>
@@ -51,7 +51,7 @@
     </div>
   </body>
 
-  <footer><img src="../imgs/berkeleylogo.jpg"
+  <footer><img src="../static/imgs/berkeleylogo.jpg"
     alt="UC Berkeley" style="width:30%;height:5%;">
   </footer>
 </html>

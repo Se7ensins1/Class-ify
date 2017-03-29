@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
-    </script>
-    <title>Class-ify</title>
-</head>
-<body>
-  <header><h1>Please confirm your inputted information.</h1></header>
+  <head>
+      <meta charset="UTF-8">
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+      </script>
+      <title>Class-ify</title>
+  </head>
+  <body>
+    <header><h1>Please confirm your inputted information.</h1></header>
 
-  <form action="http://class-ify.herokuapp.com/done" name="runProgram">
-    <input type = "submit" value = "Run Program" />
-  </form>
-  <p>
-    <applet code="Logo.class" archive="Logo.jar"></applet>
-   </p>
-   <p>
-    <object codetype="application/java" classid="java:Logo.class"
-     archive="Logo.jar"></object>
-   </p>
+    <form action="/done" name="runProgram">
+      <input type = "submit" value = "Run Program" />
+    </form>
+    <p>
+      <applet code="Logo.class" archive="Logo.jar"></applet>
+     </p>
+     <p>
+      <object codetype="application/java" classid="java:Logo.class"
+       archive="Logo.jar"></object>
+     </p>
 
-</body>
+  </body>
+
+  <footer><img src="../static/imgs/berkeleylogo.jpg"
+    alt="UC Berkeley" style="width:30%;height:5%;">
+  </footer>
+
 </html>
