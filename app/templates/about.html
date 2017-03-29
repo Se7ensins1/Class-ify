@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Credit</title>
-</head>
-<body style="background-image:url(../imgs/school.png)">
-  <h1>The Coders</h1>
+  <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+      <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+      <link rel="stylesheet" href="../static/css_style/style.css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="../static/js_style/style.js"></script>
+      <title>Class-ify</title>
+  </head>
 
-  <p>Hey, this is Eileen and I'm the one who
-    worked on the front end. I like squares. They're like my trademark.
-    <span title="sorry i just worked too hard on this ;-;">Check out the <a href="home_copy.html" target="_blank">beta page.</span></a><br>
-    I used Bootstrap to enhance my CSS and HTML, as well
-    as jQuery for my JavaScript. I also assisted in some Python on the backend.
+  <body style="background-image:url(../imgs/school.png)">
+    <div class="container-fluid"> <!-- Allows the page to adjust to user's display -->
+      <div class="row"> <!-- creates the grid -->
+        <div class ="col-md-6">
+          <form action="/"><button class ="btn-block btn btn-info"><h3>Home</h3></button></form>
+        </div>
+        <div class ="col-md-6">
+          <form action="/about"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
+        </div>
+      </div>
 
+      <h1>The Coders</h1>
 
-  </p>
+      <p>Hey, this is Eileen and I'm the one who
+        worked on the front end. I like squares. They're like my trademark.
+        <span title="sorry i just worked too hard on this ;-;">Check out the <a href="home_copy.html" target="_blank">beta page.</span></a>
+        <br>
+        I used Bootstrap to enhance my CSS and HTML, as well
+        as jQuery for my JavaScript. I also assisted in some Python on the backend.
+      </p>
 
-  <p>My partner Anastasia worked on the back end, namely making the program run
-    in the background and automatically go to the website and input the data.
-    Basically, the cool stuff.
-    <br>Anastasia used Python.</p>
-    <p>Yeah, I'm too lazy to make this page all fancy. I'm tired of
-      HTML and CSS right now.</p>
-
-<br><br><br>
-
-<p style="color:red">Psst, Anastasia, you should put why you wanted to make this app,
-  and the purpose of this app.</p>
-
-</body>
+      <p>My partner Anastasia worked on the back end, namely making the program run
+        in the background and automatically go to the website and input the data.
+        Basically, the cool stuff.
+        <br>
+        Anastasia used Python.
+      </p>
+      <p>Yeah, I'm too lazy to make this page all fancy. I'm tired of
+          HTML and CSS right now.
+      </p>
+      <br><br><br>
+      <p style="color:red">Psst, Anastasia, you should put why you wanted to make this app,
+        and the purpose of this app.
+      </p>
+    </div>
+  </body>
 </html>
