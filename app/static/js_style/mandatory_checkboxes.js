@@ -9,7 +9,7 @@
 function emailChecked(){
   $('#isEmailSelected').click(function() {
     $("#emailInfo").toggle(this.checked);
-    $("#emailInfo").css("box-shadow", "10px 5px 5px black");
+    $("#emailInfo").css("box", "10px 5px 5px black");
     $("#emailInfo").css("width", "250px");
 });
 }
@@ -18,8 +18,8 @@ function textChecked(){
   $('#isTextSelected').click(function() {
     $("#textInfo").toggle(this.checked);
     $("#serviceInfo").toggle(this.checked);
-    $("#textInfo").css("box-shadow", "10px 5px 5px black");
-    $("#serviceInfo").css("box-shadow", "10px 5px 5px black");
+    $("#textInfo").css("box", "10px 5px 5px black");
+    $("#serviceInfo").css("box", "10px 5px 5px black");
     $("#textInfo").css("width", "150px");
     //$("#serviceInfo").css("width", "200px");
 });

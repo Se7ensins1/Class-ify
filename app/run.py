@@ -14,8 +14,16 @@ def index():
 def about():
 	return render_template("about.html")
 
+@app.route('/school')
+def school():
+	return render_template("school.html")
+
+@app.route('/user-data')
+def user():
+	return render_template("userData.html")
+
 @app.route('/confirm', methods = ['POST', 'GET'])
-def keepOpen():
+def confirm():
 	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
 	userData['term'] = request.form['term']
 	userData['career'] = request.form['car']

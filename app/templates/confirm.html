@@ -8,6 +8,7 @@
       <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+      <link rel="stylesheet" href="../static/css_style/style.css"/>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
       <title>Class-ify</title>
   </head>
@@ -22,7 +23,8 @@
           <form action="/about"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
         </div>
       </div>
-      <header><h1>Please confirm your inputted information.</h1></header>
+
+      <h1 class="text-center" id="titl">Please confirm your inputted information.</h1>
       <form action="/done" name="runProgram">
         <input type = "submit" value = "Run Program" />
       </form>
@@ -36,8 +38,8 @@
     </div>
   </body>
 
-  <footer><img src="../static/imgs/berkeleylogo.jpg"
-    alt="UC Berkeley" style="width:30%;height:5%;">
+  <footer>
+    <img class="img-responsive" src="../static/imgs/berkeleylogo.jpg" alt="UC Berkeley" style="width:30%;height:5%;">
   </footer>
 
 </html>
