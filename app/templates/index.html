@@ -1,44 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css_style/style.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../static/js_style/style.js"></script>
-    <script src="../static/js_style/mandatory_checkboxes.js"></script>
-    <title>Class-ify</title>
-  </head>
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Class-ify</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="../static/assets/css/main.css" />
+		<link rel="stylesheet" href="../static/assets/css/opacSchoolBox.css"/>
+	</head>
+	<body>
 
-  <body>
-    <div class="container-fluid">
-      <div class="row"> <!-- creates the grid -->
-        <div class ="col-md-6">
-          <form action="/"><button class ="btn-block btn btn-info"><h3>Home</h3></button></form>
-        </div>
-        <div class ="col-md-6">
-          <form action="/about"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
-        </div>
-      </div>
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-      <h1 id="titl" class="text-center">Welcome to Class-ify!</h1>
-      <div id="data">
-        <h2 class="text-center">Worried about registering for classes?</h2>
-        <h6 class="text-center">(because you go to a UC that claims their students would never find it difficult to register for "small" classes with 1000+ students?)</h4> 
-        <h3>Well we're here to help!</h3>
-        <h4>Select a UC campus that you attend. Go to its registration page separate from this page and find the course number of the class you'd like to register for. Fill in the respective information for the class. Select a means of contacting you (email or text or both) that you'd like us to contact you through to receive a notification that your class is finally open. You will receive a notification every so often to ensure that the program is running. Once you confirm your class and contact info, a browser will pop up. DO NOT CLOSE THE BROWSER THAT OPENS UP TO SEARCH THROUGH THE CLASSES! So don't worry, sit back and relax. You'll be notified when the class of your choice is open without having to continuously refresh the page and check it yourself. Once someone drops the class, you'll be notified so you can enroll in it. </h4>
+				<!-- One -->
+					<section class="banner style2 orient-center content-align-center image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Class-ify</h1>
+							<p class="major">Worried about registering for classes because you go
+								to a UC that claims their students would never find it difficult
+								to register for "small" classes with 1000+ students? Well, we're here to help!<p>
 
-        <div class="text-center">
-          <form action = "/school" name = "userData">
-            <button class="center">Start!</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </body>
+						</div>
+						<div class="image">
+							<img src="../static/imgs/banner.jpg" alt="" />
+						</div>
+					</section>
 
-</html>>
+				<!-- Two -->
+					<section class="spotlight style3 orient-right content-align-left image-position-center onscroll-image-fade-in invert" id="first">
+						<div class="content">
+							<h2>Instructions</h2>
+							<p>Select a UC campus that you attend. Go to its registration page
+								separate from this page and remember the course number of the class
+								you'd like to register for. Fill in the respective information for the
+								 class. Select a means of contacting you (email or text or both) that
+								 you'd like us to contact you through to receive a notification that
+								 your class is finally open. You will receive a notification every so
+								 often to ensure that the program is running. Once you confirm your
+								 class and contact info, a browser will pop up. DO NOT CLOSE THE BROWSER
+								 THAT OPENS UP TO SEARCH THROUGH THE CLASSES! So, don't worry, sit back
+								 and relax and you'll be registered for the class of your choice as
+								 soon as the next person drops the class.</p>
+
+						</div>
+						<div class="image">
+							<img src="../static/imgs/spotlight01.jpg" alt="" />
+						</div>
+					</section>
+
+
+					<!-- Items -->
+						<section class="wrapper style1 align-center">
+
+								<div class="inner"><h2>Select a Campus Location</h2></div>
+
+									<div class="row">
+						      	<div class ="col-md-4">
+						          <a href="/user-data">
+						            <div class="container">
+						              <img src="../static/imgs/berkeley.png" alt="Berkeley" class="image" style="width:30%;height:5%;">
+						                <div class="middle">
+						                  <div class="text">UC Berkeley</div>
+						               </div>
+						            </div>
+						          </a>
+						        </div>
+						        <div class ="col-md-4">
+						          <a href="/user-data">
+						            <div class="container">
+						              <img src="../static/imgs/davis.png" alt="Davis" class="image" style="width:30%;height:5%;">
+						                <div class="middle">
+						                  <div class="text">UC Davis</div>
+						               </div>
+						            </div>
+						          </a>
+						        </div>
+						        <div class="col-md-4">
+						          <a href="/user-data">
+						            <div class="container">
+						              <img src="../static/imgs/santacruz.jpg" alt="Santa Cruz" class="image" style="width:30%;height:5%;">
+						                <div class="middle">
+						                  <div class="text">UC Santa Cruz</div>
+						               </div>
+						            </div>
+						          </a>
+						        </div>
+						      </div>
+						      <br><br>
+
+						      <div class="row">
+						        <div class="col-md-4">
+						          <a href="/user-data">
+						            <div class="container">
+						              <img src="../static/imgs/merced.png" alt="Merced" class="image" style="width:30%;height:5%;">
+						                <div class="middle">
+						                  <div class="text">UC Merced</div>
+						               </div>
+						            </div>
+						          </a>
+						        </div>
+						        <div class="col-md-4">
+						          <a href="/user-data">
+						            <div class="container">
+						              <img src="../static/imgs/santabarbara.png" alt="Santa Barbara" class="image" style="width:30%;height:5%;">
+						                <div class="middle">
+						                  <div class="text">UC Santa Barbara</div>
+						               </div>
+						            </div>
+						          </a>
+						        </div>
+						        <div class="col-md-4">
+						          <a href="/user-data">
+						            <div class="container">
+						              <img src="../static/imgs/losangeles.png" alt="Los Angeles" class="image" style="width:30%;height:5%;">
+						                <div class="middle">
+						                  <div class="text">UC Los Angeles</div>
+						               </div>
+						            </div>
+						          </a>
+						        </div>
+						      </div>
+						      <br><br>
+
+						      <div class="row">
+						        <div class="col-md-4">
+						          <a href="/user-data">
+						            <div class="container">
+						              <img src="../static/imgs/irvine.png" alt="Irvine" class="image" style="width:30%;height:5%;">
+						                <div class="middle">
+						                  <div class="text">UC Irvine</div>
+						               </div>
+						            </div>
+						          </a>
+						        </div>
+						        <div class="col-md-4">
+						          <a href="/user-data">
+						            <div class="container">
+						              <img src="../static/imgs/riverside.gif" alt="Riverside" class="image" style="width:30%;height:5%;">
+						                <div class="middle">
+						                  <div class="text">UC Riverside</div>
+						               </div>
+						            </div>
+						          </a>
+						        </div>
+						        <div class="col-md-4">
+						          <a href="/user-data">
+						            <div class="container">
+						              <img src="../static/imgs/sandiego.png" alt="San Diego" class="image" style="width:30%;height:5%;">
+						                <div class="middle">
+						                  <div class="text">UC San Diego</div>
+						               </div>
+						            </div>
+						          </a>
+						        </div>
+
+
+							</div>
+
+
+					</section>
+
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://github.com/Se7ensins1/Class-ify" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+
+								<li><a href="/about" class="icon style2 fa-user"><span class="label">About</span></a></li>
+
+							</ul>
+							<p>Design: <a href="https://html5up.net/story">HTML5 UP</a>.</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../static/assets/js/jquery.min.js"></script>
+			<script src="../static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="../static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="../static/assets/js/skel.min.js"></script>
+			<script src="../static/assets/js/util.js"></script>
+			<script src="../static/assets/js/main.js"></script>
+
+	</body>
+</html>

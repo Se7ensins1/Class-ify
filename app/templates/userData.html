@@ -1,84 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css_style/style.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="../static/js_style/style.js"></script>
-    <script src="../static/js_style/mandatory_checkboxes.js"></script>
-    <title>Class-ify</title>
-  </head>
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
-  <body>
-    <div class="container-fluid"> <!-- Allows the page to adjust to user's display -->
-      <div class="row"> <!-- creates the grid -->
-        <div class ="col-md-6">
-          <form action="/"><button class ="btn-block btn btn-info"><h3>Home</h3></button></form>
-        </div>
-        <div class ="col-md-6">
-          <form action="/about"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
-        </div>
-      </div>
-      <h1 id="titl" class="text-center">Select a Class and Contact Info</h1>
-      <p></p>
-      <div id="data">
-        <form action = "/confirm" method = "post" name = "userData">
-          <div class="row">
-            <div class="col-md-6">
-              <h2>Term:</h2>
-              <select size="1" style="width:250px;" id="semester" name="term">
+	Note: Only needed for demo purposes. Delete for production sites.
+-->
+<html>
+	<head>
+		<title>Class-ify</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../static/assets/css/main.css" />
+
+
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
+
+				<!-- Banner -->
+							<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Class-ify</h1>
+							<ul class="actions vertical">
+								<li><a href="/" class="button big wide smooth-scroll-middle special fit">Home</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="../static/imgs/banner.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- Spotlight -->
+				<form action = "/confirm" method = "post" name = "userData">
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Term</h2>
+							<select size="1" style="width:250px;" id="semester" name="term">
                 <option value="notValid" selected='selected'>&nbsp; </option>
                 <option>2017 Spring</option>
                 <option>2017 Summer</option>
               </select>
-              <h2>Class Number:</h2>
-              <input type="number" name="classNum">
-              <h2>Course Career:</h2>
-              <select size="1" style="width:250px" id="career" name="car">
-                <option value="notValid" selected='selected'>&nbsp; </option>
-                <option>Graduate</option>
-                <option>Law</option>
-                <option>UC Berkeley extension</option>
-                <option>Undergraduate</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <h2>Email:</h2>
-              <input type="checkbox" name="email" id="isEmailSelected">
-              <input type="text" name="emailName" id="emailInfo"><br>
-              <h2>Text and Service:</h2>
-              <input type="checkbox" name="text" id="isTextSelected">
-              <input type="text" name="phoneNumber" id="textInfo" placeholder="########## Format">
-              <select size="1" style="width:150px" id="serviceInfo" name="service">
-                <option value="Service Company" selected='selected'>Service Company </option>
-                <option>att</option>
-                <option>tmobile</option>
-                <option>verizon</option>
-                <option>sprint</option>
-                <option>virginmobile</option>
-                <option>metropcs</option>
-                <option>boostmobile</option>
-                <option>cricket</option>
-                <option>ting</option>
-              </select>
-              <br><br><br><br><br>
-              <div class="text-center">
-                <input type="submit" value="continue">
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+						</div>
+						<div class="image">
+							<img src="../static/imgs/spotlight01.jpg" alt="" />
+						</div>
+					</section>
 
-  </body>
+				<!-- Spotlight -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Course Number</h2>
+							<input type="number" name="classNum">
+						</div>
+						<div class="image">
+							<img src="../static/imgs/spotlight02.jpg" alt="" />
+						</div>
+					</section>
 
-  <footer>
-    <img class="img-responsive" src="../static/imgs/berkeleylogo.jpg" alt="UC Berkeley" style="width:30%;height:5%;">
-  </footer>
+				<!-- Spotlight -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Course Career</h2>
+							<select size="1" style="width:250px" id="career" name="car">
+								<option value="notValid" selected='selected'>&nbsp; </option>
+								<option>Graduate</option>
+								<option>Law</option>
+								<option>UC Berkeley extension</option>
+								<option>Undergraduate</option>
+							</select>
+						</div>
+						<div class="image">
+							<img src="../static/imgs/spotlight03.jpg" alt="" />
+						</div>
+					</section>
+
+
+
+				<!-- Additional Elements -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+
+								<!-- Form -->
+									<section>
+
+										<div class="content">
+
+
+
+											<h2>Email:</h2>
+											<input type="checkbox" name="email" id="isEmailSelected">
+											<label for="isEmailSelected"></label><br><br>
+
+											<input type="text" name="emailName" id="emailInfo"><br><br>
+											<h2>Text and Service:</h2>
+											<input type="checkbox" name="text" id="isTextSelected">
+											<label for="isTextSelected"></label><br><br>
+											<input type="text" name="phoneNumber" id="textInfo" placeholder="########## Format"><br>
+											<select size="1" id="serviceInfo" name="service">
+												<option value="Service Company" selected='selected'>Service Company </option>
+												<option value="att">ATT</option>
+												<option value="tmobile">T-Mobile</option>
+												<option value="verizon">Verizon</option>
+												<option value="sprint">Sprint</option>
+												<option value="virginmobile">Virgin Mobile</option>
+												<option value="metropcs">MetroPCS</option>
+												<option value="boostmobile">Boost Mobile</option>
+												<option value="cricket">Cricket</option>
+												<option value="ting">Ting</option>
+											</select>
+
+												</div>
+
+
+
+
+											</form>
+
+										</div>
+<br><br>
+
+										<ul class="actions">
+											<li><input type="submit" name="submit" id="submit" value="Confirm" /></li>
+										</ul>
+
+									</section>
+</form>
+
+
+
+
+
+
+
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://github.com/Se7ensins1/Class-ify" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+
+								<li><a href="/about" class="icon style2 fa-user"><span class="label">About</span></a></li>
+
+							</ul>
+							<p>Design: <a href="https://html5up.net/story">HTML5 UP</a>.</p>
+						</div>
+					</footer>
+
+			</div>
+
+
+		<!-- Scripts -->
+			<script src="../static/assets/js/jquery.min.js"></script>
+			<script src="../static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="../static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="../static/assets/js/skel.min.js"></script>
+			<script src="../static/assets/js/util.js"></script>
+			<script src="../static/assets/js/main.js"></script>
+			<script src="../static/js_style/mandatory_checkboxes.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+	</body>
 </html>
