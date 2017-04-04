@@ -18,11 +18,9 @@ def about():
 def school():
 	return render_template("school.html")
 
-@app.route('/user-data', methods = ['POST', 'GET'])
+@app.route('/user-data')
 def user():
-	 if request.method == 'POST':
-      userdata = request.form
-	return render_template("userData.html", userdata=userdata)
+	return render_template("userData.html")
 
 @app.route('/confirm', methods = ['POST', 'GET'])
 def confirm():
