@@ -20,7 +20,9 @@ def school():
 
 @app.route('/user-data')
 def user():
-	return render_template("userData.html")
+	a = request.args.get('a', 0, type=int)
+    b = request.args.get('b', 0, type=int)
+	return render_template("userData.html", jsonify(result=a + b))
 
 @app.route('/confirm', methods = ['POST', 'GET'])
 def confirm():
