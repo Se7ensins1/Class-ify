@@ -2,7 +2,7 @@
 
 
 function setup(){
-$("input").hide();
+
 
 }
 
