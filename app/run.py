@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, jsonify
+from flask import Flask, render_template, redirect, url_for, request
 import os
 from status import main
 
@@ -20,9 +20,7 @@ def school():
 
 @app.route('/user-data')
 def user():
-	a = request.args.get('a', 0, type=int)
-    b = request.args.get('b', 0, type=int)
-	return render_template("userData.html", jsonify(result=a + b))
+	return render_template("userData.html")
 
 @app.route('/confirm', methods = ['POST', 'GET'])
 def confirm():
