@@ -18,9 +18,41 @@ def about():
 def school():
 	return render_template("school.html")
 
-@app.route('/user-data')
+@app.route('/user-data-berkeley')
 def user():
-	return render_template("userData.html")
+	return render_template("userDataBerkeley.html")
+
+@app.route('/user-data-davis')
+def user():
+	return render_template("userDataDavis.html")
+
+@app.route('/user-data-irvine')
+def user():
+	return render_template("userDataIrvine.html")
+
+@app.route('/user-data-losangeles')
+def user():
+	return render_template("userDataLosAngeles.html")
+
+@app.route('/user-data-merced')
+def user():
+	return render_template("userDataMerced.html")
+
+@app.route('/user-data-riverside')
+def user():
+	return render_template("userDataRiverside.html")
+
+@app.route('/user-data-sandiego')
+def user():
+	return render_template("userDataSanDiego.html")
+
+@app.route('/user-data-santabarbara')
+def user():
+	return render_template("userDataSantaBarbara.html")
+
+@app.route('/user-data-santacruz')
+def user():
+	return render_template("userDataSantaCruz.html")
 
 @app.route('/confirm', methods = ['POST', 'GET'])
 def confirm():
