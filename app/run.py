@@ -19,39 +19,39 @@ def school():
 	return render_template("school.html")
 
 @app.route('/user-data-berkeley')
-def user():
+def userB():
 	return render_template("userDataBerkeley.html")
 
 @app.route('/user-data-davis')
-def user():
+def userD():
 	return render_template("userDataDavis.html")
 
 @app.route('/user-data-irvine')
-def user():
+def userI():
 	return render_template("userDataIrvine.html")
 
 @app.route('/user-data-losangeles')
-def user():
+def userLA():
 	return render_template("userDataLosAngeles.html")
 
 @app.route('/user-data-merced')
-def user():
+def userM():
 	return render_template("userDataMerced.html")
 
 @app.route('/user-data-riverside')
-def user():
+def userR():
 	return render_template("userDataRiverside.html")
 
 @app.route('/user-data-sandiego')
-def user():
+def userSD():
 	return render_template("userDataSanDiego.html")
 
 @app.route('/user-data-santabarbara')
-def user():
+def userSB():
 	return render_template("userDataSantaBarbara.html")
 
 @app.route('/user-data-santacruz')
-def user():
+def userSC():
 	return render_template("userDataSantaCruz.html")
 
 @app.route('/confirm', methods = ['POST', 'GET'])
