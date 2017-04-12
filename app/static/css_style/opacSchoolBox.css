@@ -32,3 +32,12 @@
   padding: 16px 32px;
   width: 50%;
 }
+
+#opac{
+  opacity: 1;
+  transition: .5s ease;
+}
+
+#opac:hover{
+  opacity: 0;
+}
