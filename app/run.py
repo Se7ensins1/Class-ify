@@ -18,48 +18,16 @@ def about():
 def school():
 	return render_template("school.html")
 
-@app.route('/user-data-berkeley')
-def userB():
-	return render_template("userDataBerkeley.html")
-
-@app.route('/user-data-davis')
-def userD():
-	return render_template("userDataDavis.html")
-
-@app.route('/user-data-irvine')
-def userI():
-	return render_template("userDataIrvine.html")
-
-@app.route('/user-data-losangeles')
-def userLA():
-	return render_template("userDataLosAngeles.html")
-
-@app.route('/user-data-merced')
-def userM():
-	return render_template("userDataMerced.html")
-
-@app.route('/user-data-riverside')
-def userR():
-	return render_template("userDataRiverside.html")
-
-@app.route('/user-data-sandiego')
-def userSD():
-	return render_template("userDataSanDiego.html")
-
-@app.route('/user-data-santabarbara')
-def userSB():
-	return render_template("userDataSantaBarbara.html")
-
-@app.route('/user-data-santacruz')
+@app.route('/user-data')
 def userSC():
-	return render_template("userDataSantaCruz.html")
+	return render_template("userData.html")
 
 @app.route('/confirm', methods = ['POST', 'GET'])
 def confirm():
 	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
 	userData['term'] = request.form['term']
-	userData['career'] = request.form['car']
-	userData['classNum'] = request.form['classNum']
+	userData['career'] = request.form['career']
+	userData['classNum'] = request.form['num']
 	userData['mailTo'] = request.form['emailName']
 	userData['textTo'] = request.form['phoneNumber']
 	userData['service'] = request.form['service']

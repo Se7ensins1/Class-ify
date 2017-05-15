@@ -1,0 +1,116 @@
+
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Note: Only needed for demo purposes. Delete for production sites.
+-->
+<html>
+	<head>
+		<title>Class-ify - Berkeley</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../static/assets/css/main.css" />
+		<link rel="stylesheet" href="../static/css_style/style.css" />
+	</head>
+	<body>
+		<!-- Wrapper -->
+		<div id="wrapper" class="divided">
+			<section class="wrapper style1 align-center">
+				<div class="inner">
+
+					<!-- Form -->
+					
+					<header>
+						<h2>Catalog</h2>
+					</header>
+					<div class="content">
+
+						<form method="post" action="/confirm">
+							<label for="email">Term:</label>
+							<div class="field third first">
+								<input type="radio" id="term1" name="term" />
+								<label for="term1">Spring 2017</label>
+							</div>
+							<div class="field third">
+								<input type="radio" id="term2" name="term" checked />
+								<label for="term2">Summer 2017</label>
+							</div>
+							<div class="field third">
+								<input type="radio" id="term3" name="term" />
+								<label for="term3">Fall 2017</label>
+							</div>
+
+							<hr>
+
+							<div class="field half first">
+								<label for="num">Course Number</label>
+								<input type="number" name="num" id="num" value="" />
+							</div>
+
+							<div class="field half">
+								<label for="career">Course Career</label>
+								<div class="select-wrapper">
+									<select name="career" id="career">
+										<option value="">- Category -</option>
+										<option value="Graduate">Graduate</option>
+										<option value="Law">Law</option>
+										<option value="Extension">UC Berkeley Extension</option>
+										<option value="Undergraduate">Undergraduate</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="field half first">
+								<label for="email">Email?</label>
+								<input type="checkbox" name="email" id="isEmailSelected">
+								<label for="isEmailSelected"></label> <br><br>
+								<input type="text" name="emailName" id="emailInfo">
+							</div>
+
+							<div class="field half">
+								<label for="text">Text?</label>
+								<input type="checkbox" name="text" id="isTextSelected">
+								<label for="isTextSelected"></label> <br><br>
+								<input type="text" name="phoneNumber" id="textInfo" placeholder="########## Format"><br>
+								<div class="select-wrapper">
+									<select size="1" id="serviceInfo" name="service">
+										<option value=''>- Service Provider -</option>
+										<option value="att">ATT</option>
+										<option value="tmobile">T-Mobile</option>
+										<option value="verizon">Verizon</option>
+										<option value="sprint">Sprint</option>
+										<option value="virginmobile">Virgin Mobile</option>
+										<option value="metropcs">MetroPCS</option>
+										<option value="boostmobile">Boost Mobile</option>
+										<option value="cricket">Cricket</option>
+										<option value="ting">Ting</option>
+									</select>
+								</div>
+							</div>
+
+							<ul class="actions">
+								<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<!-- Footer -->
+		<footer class="wrapper style1 align-center">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://github.com/Se7ensins1/Class-ify" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+
+					<li><a href="/about" class="icon style2 fa-user"><span class="label">About</span></a></li>
+
+				</ul>
+				<p>Design: <a href="https://html5up.net/story">HTML5 UP</a>.</p>
+			</div>
+		</footer>
+	</body>
+</html>
