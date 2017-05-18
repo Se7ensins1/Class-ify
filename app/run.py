@@ -24,17 +24,17 @@ def userSC():
 
 @app.route('/confirm', methods = ['POST', 'GET'])
 def confirm():
-	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
 	userData['term'] = request.form['term']
 	userData['career'] = request.form['career']
 	userData['classNum'] = request.form['num']
 	userData['mailTo'] = request.form['emailName']
 	userData['textTo'] = request.form['phoneNumber']
 	userData['service'] = request.form['service']
-	return render_template("confirm.html")
+	return render_template("confirm.html", result = userData)
 
 @app.route('/done')
 def run():
+	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
 	main(userData['url'], userData['term'], userData['career'], userData['classNum'], userData['mailTo'], userData['textTo'], userData['service'])
 	return render_template("done.html")
 

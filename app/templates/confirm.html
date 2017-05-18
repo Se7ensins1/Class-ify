@@ -2,50 +2,78 @@
 <html lang="en">
 
   <head>
-      <meta charset="UTF-8">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-      <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-      <script language="javascript" type="text/javascript" src="../static/js_style/userData.js"></script>
-      <title>Class-ify</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <link rel="stylesheet" href="../static/assets/css/main.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <title>Class-ify</title>
   </head>
 
-  <body>
-    <div class="container-fluid"> <!-- Allows the page to adjust to user's display -->
-      <div class="row"> <!-- creates the grid -->
-        <div class ="col-md-6">
-          <form action="/"><button class ="btn-block btn btn-info"><h3>Home</h3></button></form>
-        </div>
-        <div class ="col-md-6">
-          <form action="/about"><button class="btn-block btn btn-warning"><h3>About</h3></button></form>
-        </div>
+  <body>      
+      <!-- Wrapper -->
+      <div id="wrapper" class="divided">
+        <section class="wrapper style1 align-center">
+          <div class="inner">
+
+            <!-- Table -->
+            <section>
+              <header>
+                <h2>Please confirm your inputted information.</h2>
+              </header>
+              <div class="content">
+                <form name="form1" action="next.html" method="POST">
+                  <div class="table-wrapper">
+                    <table>
+                      <tbody>
+                        <tr>
+                           <th>term</th>
+                           <td> {{ result['term'] }} </td>
+                        </tr>
+                        <tr>
+                           <th>course number</th>
+                           <td> {{ result['classNum'] }} </td>
+                        </tr>
+                        <tr>
+                           <th>course career</th>
+                           <td> {{ result['career'] }} </td>
+                        </tr>
+                        {% if result['mailTo'] != '' %}
+                          <tr>
+                             <th>email address</th>
+                             <td> {{ result['mailTo'] }} </td>
+                          </tr>
+                        {% endif %}
+                        {% if result['textTo'] != '' %}
+                          <tr>
+                             <th>phone number</th>
+                             <td> {{ result['textTo'] }} </td>
+                          </tr>
+                          <tr>
+                             <th>text service </th>
+                             <td> {{ result['service'] }} </td>
+                          </tr>
+                        {% endif %}
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </section>
+
+            </form>
+
+            <form action="/done" name="runProgram">
+              <input type = "submit" value = "Run Program" />
+            </form>
+            <applet code="Logo.class" archive="Logo.jar"></applet>
+            <object codetype="application/java" classid="java:Logo.class" archive="Logo.jar"></object>
+          </div>
+        </section>
       </div>
-
-      <h1 class="text-center" id="titl">Please confirm your inputted information.</h1>
-      
-
-      <form name="form1" action="next.html" method="get">
-        <table>
-          <tr>
-              <td id="here">test</td>
-          </tr>
-        </table>
-      </form>
-
-
-      <form action="/done" name="runProgram">
-        <input type = "submit" value = "Run Program" />
-      </form>
-      <p>
-        <applet code="Logo.class" archive="Logo.jar"></applet>
-      </p>
-      <p>
-        <object codetype="application/java" classid="java:Logo.class"
-        archive="Logo.jar"></object>
-      </p>
     </div>
   </body>
 

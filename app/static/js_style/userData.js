@@ -11,15 +11,6 @@ function setup(){
     $("#search").click(obtainUserData);
 }
 
-function testJS(){
-
-var b = document.getElementById('career').value
-
-document.getElementById('here').innerHTML = b;
-
-}
-
-
 $(document).ready(setup)
 
 
