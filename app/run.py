@@ -32,10 +32,12 @@ def confirm():
 @app.route('/technicalities')
 def technicalities():
 	return render_template("technicalities.html")
+
+@app.route('/run')
+def run():
 	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
-	main(userData['url'], userData['term'], userData['career'], userData['classNum'], userData['mailTo'], userData['textTo'], userData['service'])
-
-
+	return main(userData)
+	
 
 if __name__ == '__main__':
    port = int(os.environ.get("PORT", 5000))
