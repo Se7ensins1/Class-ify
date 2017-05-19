@@ -27,17 +27,17 @@
 						</header>
 						<div class="content">
 							<form method="post" action="/confirm">
-								<label for="email">Term:</label>
+								<label for="term">Term:</label>
 								<div class="field third first">
-									<input type="radio" id="term1" name="term" />
+									<input type="radio" id="term1" name="term" value = "2017 Spring" />
 									<label for="term1">Spring 2017</label>
 								</div>
 								<div class="field third">
-									<input type="radio" id="term2" name="term" checked />
+									<input type="radio" id="term2" name="term" value = "2017 Summer" />
 									<label for="term2">Summer 2017</label>
 								</div>
 								<div class="field third">
-									<input type="radio" id="term3" name="term" />
+									<input type="radio" id="term3" name="term" value = "2017 Fall" />
 									<label for="term3">Fall 2017</label>
 								</div>
 								<br><hr>
@@ -59,17 +59,16 @@
 									</div>
 								</div>
 								<br><br><br><hr>
+								<label for="term">Choose a means of contact:</label>
 								<div class="field half first">
-									<label for="email">Email?</label>
 									<input type="checkbox" name="email" id="isEmailSelected">
-									<label for="isEmailSelected"></label> <br><br>
+									<label for="isEmailSelected">Email?</label> <br><br>
 									<input type="text" name="emailName" id="emailInfo">
 								</div>
 
 								<div class="field half">
-									<label for="text">Text?</label>
 									<input type="checkbox" name="text" id="isTextSelected">
-									<label for="isTextSelected"></label> <br><br>
+									<label for="isTextSelected">Text?</label> <br><br>
 									<input type="text" name="phoneNumber" id="textInfo" placeholder="########## Format"><br>
 									<div class="select-wrapper">
 										<select size="1" id="serviceInfo" name="service">
@@ -86,7 +85,7 @@
 										</select>
 									</div>
 								</div>
-
+								<br><br><br><br><br><br><br>
 								<ul class="actions">
 									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
 								</ul>
@@ -101,13 +100,28 @@
 		<footer class="wrapper style1 align-center">
 			<div class="inner">
 				<ul class="icons">
-					<li><a href="https://github.com/Se7ensins1/Class-ify" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-
-					<li><a href="/about" class="icon style2 fa-user"><span class="label">About</span></a></li>
+					<li>
+						<a href="https://github.com/Se7ensins1/Class-ify" class="icon style2 fa-github">
+							<span class="label">GitHub</span>
+						</a>
+						<a href="/about" class="icon style2 fa-user">
+							<span class="label">About</span>
+						</a>
+					</li>
 
 				</ul>
 				<p>Design: <a href="https://html5up.net/story">HTML5 UP</a>.</p>
 			</div>
 		</footer>
+		<!-- Script -->
+		<script src="../static/assets/js/jquery.min.js"></script>
+		<script src="../static/assets/js/jquery.scrollex.min.js"></script>
+		<script src="../static/assets/js/jquery.scrolly.min.js"></script>
+		<script src="../static/assets/js/skel.min.js"></script>
+		<script src="../static/assets/js/util.js"></script>
+		<script src="../static/assets/js/main.js"></script>
+		<script src="../static/js_style/mandatory_checkboxes.js"></script>
+		<script src="../static/assets/js/changePics.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	</body>
 </html>

@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 userData = {}
 
+
 @app.route('/')
 def index():
 	return render_template("index.html")
@@ -13,10 +14,6 @@ def index():
 @app.route('/about')
 def about():
 	return render_template("about.html")
-
-@app.route('/school')
-def school():
-	return render_template("school.html")
 
 @app.route('/user-data')
 def userSC():
@@ -36,7 +33,7 @@ def confirm():
 def run():
 	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
 	main(userData['url'], userData['term'], userData['career'], userData['classNum'], userData['mailTo'], userData['textTo'], userData['service'])
-	return render_template("done.html")
+	# return render_template("done.html")
 
 
 if __name__ == '__main__':
