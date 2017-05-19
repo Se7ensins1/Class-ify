@@ -29,11 +29,12 @@ def confirm():
 	userData['service'] = request.form['service']
 	return render_template("confirm.html", result = userData)
 
-@app.route('/done')
-def run():
+@app.route('/technicalities')
+def technicalities():
+	return render_template("technicalities.html")
 	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
 	main(userData['url'], userData['term'], userData['career'], userData['classNum'], userData['mailTo'], userData['textTo'], userData['service'])
-	# return render_template("done.html")
+
 
 
 if __name__ == '__main__':

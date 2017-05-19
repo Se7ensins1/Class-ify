@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
     <link rel="stylesheet" href="../static/assets/css/main.css" />
+    <link rel="stylesheet" href="../static/assets/css/table.css" />
+    <link rel="stylesheet" href="../static/assets/css/wrapper.css" />
+    <link rel="stylesheet" href="../static/assets/css/list.css" />
+    <link rel="stylesheet" href="../static/assets/css/icon.css" />
+    <link rel="stylesheet" href="../static/assets/css/button.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <title>Class-ify</title>
   </head>
@@ -19,14 +24,13 @@
         <section class="wrapper style1 align-center">
           <div class="inner">
 
-            <!-- Table -->
+            <!-- Table --><!-- list -->
             <section>
               <header>
                 <h2>Please confirm your inputted information.</h2>
               </header>
               <div class="content">
-                <form name="form1" action="next.html" method="POST">
-                  <div class="table-wrapper">
+                <div class="table-wrapper">
                     <table>
                       <tbody>
                         <tr>
@@ -59,15 +63,12 @@
                         {% endif %}
                       </tbody>
                     </table>
-                  </div>
-
                 </div>
-              </section>
+              </div>
+            </section>
 
-            </form>
-
-            <form action="/done" name="runProgram">
-              <input type = "submit" value = "Run Program" />
+            <form action="/technicalities" name="runProgram">
+              <input type = "submit" value = "confirm" />
             </form>
           </div>
         </section>
