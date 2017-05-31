@@ -46,6 +46,8 @@ function setup(){
     $("#berkeley").addClass("middleclicked");
     ++clickTimes;
   }));
+  
+  }
 }
 
 
