@@ -8,7 +8,7 @@
 -->
 <html>
 	<head>
-		<title>Class-ify - Berkeley</title>
+		<title>Class-ify {{ result['campus'] }}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../static/assets/css/main.css" />
@@ -29,8 +29,32 @@
 				<h1>Class-ify</h1>
 			</div>
 			<div class="image">
-				{%if result['campus'] == 'ucb' %}
-				<img src="../static/imgs/ucal-fb-image.jpg" alt=""/>
+				{%if result['campus'] == 'UCB' %}
+				<img src="../static/imgs/campanile.jpg" alt=""/>
+				{% endif %}
+				{%if result['campus'] == 'UCSD' %}
+				<img src="../static/imgs/ucsdlibrary.jpg" alt=""/>
+				{% endif %}
+				{%if result['campus'] == 'UCSB' %}
+				<img src="../static/imgs/storketower.jpg" alt=""/>
+				{% endif %}
+				{%if result['campus'] == 'UCSC' %}
+				<img src="../static/imgs/mchenrylibrary.jpg" alt=""/>
+				{% endif %}
+				{%if result['campus'] == 'UCD' %}
+				<img src="../static/imgs/mondavicenter.jpg" alt=""/>
+				{% endif %}
+				{%if result['campus'] == 'UCI' %}
+				<img src="../static/imgs/murraykriegerhall.jpg" alt=""/>
+				{% endif %}
+				{%if result['campus'] == 'UCM' %}
+				<img src="../static/imgs/kolligianlibrary.jpg" alt=""/>
+				{% endif %}
+				{%if result['campus'] == 'UCR' %}
+				<img src="../static/imgs/carillonbelltower.jpg" alt=""/>
+				{% endif %}
+				{%if result['campus'] == 'UCLA' %}
+				<img src="../static/imgs/roycehalls.jpg" alt=""/>
 				{% endif %}
 			</div>
 		</section>
