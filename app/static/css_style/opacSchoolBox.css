@@ -41,3 +41,14 @@
 #opac:hover{
   opacity: 0;
 }
+
+.middleclicked{
+
+  opacity: 0.3;
+  display: block;
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+
+
+}

@@ -5,6 +5,7 @@ from status import main
 app = Flask(__name__)
 
 userData = {}
+schoolBanner = {}
 
 
 @app.route('/')
@@ -15,9 +16,10 @@ def index():
 def about():
 	return render_template("about.html")
 
-@app.route('/user-data')
+@app.route('/user-data', methods = ['POST', 'GET'])
 def userSC():
-	return render_template("userData.html")
+	schoolBanner['campus'] = request.form['campus']
+	return render_template("userData.html", result = schoolBanner)
 
 @app.route('/confirm', methods = ['POST', 'GET'])
 def confirm():
@@ -37,7 +39,7 @@ def technicalities():
 def run():
 	userData['url'] = "https://bcsweb.is.berkeley.edu/psc/bcsprd_pub/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL"
 	return main(userData)
-	
+
 
 if __name__ == '__main__':
    port = int(os.environ.get("PORT", 5000))

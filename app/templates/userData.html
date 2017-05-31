@@ -17,10 +17,24 @@
 		<link rel="stylesheet" href="../static/assets/css/button.css" />
     	<link rel="stylesheet" href="../static/assets/css/icon.css" />
     	<link rel="stylesheet" href="../static/assets/css/form.css" />
+			<link rel="stylesheet" href="../static/assets/css/banner.css" />
 		<script language="javascript" type="text/javascript" src="../static/js_style/userData.js"></script>
 	</head>
 	<body>
 		<!-- Wrapper -->
+
+
+		<section class="banner style5 orient-center content-align-center image-position-center onload-image-fade-in onload-content-fade-right">
+			<div class="content">
+				<h1>Class-ify</h1>
+			</div>
+			<div class="image">
+				{%if result['campus'] == 'berkeley' %}
+				<img src="../static/imgs/ucal-fb-image.jpg" alt=""/>
+				{% endif %}
+			</div>
+		</section>
+
 		<div id="wrapper" class="divided">
 			<section class="wrapper style1 align-center">
 				<div class="inner">
@@ -28,7 +42,7 @@
 					<!-- Form -->
 					<section>
 						<header>
-							<h2>Catalog</h2>
+								<h2>Catalog</h2>
 						</header>
 						<div class="content">
 							<form method="post" action="/confirm">

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../static/assets/css/spotlight.css" />
     <link rel="stylesheet" href="../static/assets/css/wrapper.css" />
     <link rel="stylesheet" href="../static/assets/css/items.css" />
+		<link rel="stylesheet" href="../static/assets/css/button.css" />
 		<link rel="stylesheet" href="../static/css_style/opacSchoolBox.css"/>
 	</head>
 	<body>
@@ -60,100 +61,109 @@
 			</section>
 
 			<!-- Three: Items -->
+
       <section class="wrapper style1 align-center">
         <div class="items style3 medium onscroll-fade-in">
           <section>
-            <a href="/user-data">
-              <div class="container" >
+
+              <div class="container" id="berkeley">
                 <img src="../static/imgs/berkeley.png" alt="Berkeley" class="imag" style="width:60%;height:5%;" id="berk"/>
                 <div class="middle">
                   <div class="text">UC Berkeley</div>
                 </div>
               </div>
-            </a>
+
           </section>
           <section>
-            <a href="/user-data">
-              <div class="container">
+
+              <div class="container" id="davis">
                 <img src="../static/imgs/davis.png" alt="Davis" class="imag" style="width:60%;height:5%;" />
                 <div class="middle">
                   <div class="text">UC Davis</div>
                 </div>
               </div>
-            </a>
+
           </section>
           <section>
-            <a href="/user-data">
-              <div class="container">
+
+              <div class="container" id="cruz">
                 <img src="../static/imgs/santacruz.jpg" alt="Santa Cruz" class="imag" style="width:60%;height:5%;" />
                 <div class="middle">
                   <div class="text">UC Santa Cruz</div>
                 </div>
               </div>
-            </a>
+
           </section>
           <section>
-            <a href="/user-data">
-              <div class="container">
+
+              <div class="container" id="merced">
                 <img src="../static/imgs/merced.png" alt="Merced" class="imag" style="width:60%;height:5%;" />
                 <div class="middle">
                   <div class="text">UC Merced</div>
                 </div>
               </div>
-            </a>
+
           </section>
           <section>
-            <a href="/user-data">
-              <div class="container">
+
+              <div class="container" id="barbara">
                 <img src="../static/imgs/santabarbara.png" alt="Santa Barbara" class="imag" style="width:60%;height:5%;" />
                 <div class="middle">
                   <div class="text">UC Santa Barbara</div>
                 </div>
               </div>
-            </a>
+
           </section>
           <section>
-            <a href="/user-data">
-              <div class="container">
+
+              <div class="container" id="losangeles">
                 <img src="../static/imgs/losangeles.png" alt="Los Angeles" class="imag" style="width:60%;height:5%;" />
                 <div class="middle">
                   <div class="text">UC Los Angeles</div>
                 </div>
               </div>
-            </a>
+
           </section>
           <section>
-            <a href="/user-data">
-              <div class="container">
+
+              <div class="container" id="irvine">
                 <img src="../static/imgs/irvine.png" alt="Irvine" class="imag" style="width:60%;height:5%;" />
                 <div class="middle">
                   <div class="text">UC Irvine</div>
                 </div>
               </div>
-            </a>
+
           </section>
           <section>
-            <a href="/user-data">
-              <div class="container">
+
+              <div class="container" id="riverside">
                 <img src="../static/imgs/riverside.gif" alt="Riverside" class="imag" style="width:60%;height:5%;" />
                 <div class="middle">
                   <div class="text">UC Riverside</div>
                 </div>
               </div>
-            </a>
+
           </section>
           <section>
-            <a href="/user-data">
-              <div class="container">
+
+              <div class="container" id="diego">
                 <img src="../static/imgs/sandiego.png" alt="San Diego" class="imag" style="width:60%;height:5%;" />
                 <div class="middle">
                   <div class="text">UC San Diego</div>
                 </div>
               </div>
-            </a>
+
           </section>
+
+					<form method="post" action="/user-data" name="campus">
+						<input type="text" name="campus" id="campus" style="opacity:0">
+					<ul class="actions">
+						<li><input type="submit" name="submit" id="submit" value="Go to Campus" class="special vertical"/></li>
+					</ul>
         </div>
       </section>
+		</form>
+
 
 			<!-- Four: Footer -->
 			<footer class="wrapper style1 align-center">
@@ -182,8 +192,9 @@
 		<script src="../static/assets/js/skel.min.js"></script>
 		<script src="../static/assets/js/util.js"></script>
 		<script src="../static/assets/js/main.js"></script>
-		<script src="../static/js_style/changePics.js"></script>
+		<script src="../static/js_style/changeBanner.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 
 	</body>
 </html>
